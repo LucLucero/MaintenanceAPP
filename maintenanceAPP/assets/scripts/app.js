@@ -33,5 +33,36 @@ db.on('populate', async () => {
 
 })
 
-
 db.open();
+
+//Pegar os dados no form
+async function saveFormData(event){
+
+    event.preventDefault();
+    const form = event.target;
+    await saveOnDB({
+
+            date: form.date.value,
+            local1: form.local1.value,
+            local2: form.local2.value,
+            tag: form.tag.value,
+            equipament: form.equipament.value,
+            description: form.description.value,
+
+    })
+    form.reset();
+    return false;
+}
+
+//Salvando no DB
+
+async function saveOnDB({}){
+
+
+
+
+}
+
+//Criando evento do Botão
+const form = document.querySelector('form');
+form.addEventListener('submit', saveFormData);
