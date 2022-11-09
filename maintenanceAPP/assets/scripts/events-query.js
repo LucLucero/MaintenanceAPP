@@ -40,8 +40,6 @@ async function deleteFromDB(event){
     const idDelete = parseInt(form.delID.value);
     console.log(typeof(idDelete));
     const query = await db.maintenanceEvents.where('id').equals(idDelete).delete();
-    console.log(query);
-   
     
     retrieveData();
     return console.log(`ID ${form.delID.value}, deletado`);
