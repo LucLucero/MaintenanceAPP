@@ -8,7 +8,7 @@ table {
 
 
 }
-td {
+td, div {
 
     text-align: center;
     border-right: solid 1px;

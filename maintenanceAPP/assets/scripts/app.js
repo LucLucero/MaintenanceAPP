@@ -93,35 +93,4 @@ try{
 
 }
 
-
-//Fazendo a query
-async function retrieveData(){
-
-    const queryEvent = await db.maintenanceEvents.toArray();
-    const eventHTML = queryEvent.map(toHTML).join('');
-    try {        
-        const newRow = document.getElementById('new_data')
-        console.log("Consegui ver onde vou plotar os dados");
-        newRow.innerHTML = eventHTML;
-        document.body.appendChild(newRow);
-    } catch (error) {
-        console.log("Impossible, there is no 'div' here...");
-    }   
-    
-}
-
-function toHTML(evento){
-
-    return `
-    <tr>                   
-        <td>${evento.date}</td>
-        <td>${evento.local1}</td>
-        <td>${evento.local2}</td>
-        <td>${evento.tag}</td>
-        <td>${evento.equipament}</td>
-        <td>${evento.description}</td>                    
-    </tr>    
-    `
-
-
-}
+export default db;
