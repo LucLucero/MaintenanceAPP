@@ -61,6 +61,7 @@ async function saveOnDB({date,local1,local2,tag,equipament,description}){
     try{
         await db.maintenanceEvents.add({
 
+            
             date,
             local1,
             local2,
@@ -86,7 +87,7 @@ async function saveOnDB({date,local1,local2,tag,equipament,description}){
 
     try {
 
-        const form = document.querySelector('form');
+        const form = document.getElementById('form-2');
         form.addEventListener('submit', saveFormData);   
 
     } catch (error) {
