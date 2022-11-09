@@ -58,17 +58,27 @@ async function saveFormData(event){
 
 async function saveOnDB({date,local1,local2,tag,equipament,description}){
 
-    await db.maintenanceEvents.add({
+    try{
+        await db.maintenanceEvents.add({
 
-        date,
-        local1,
-        local2,
-        tag,
-        equipament,
-        description,
+            date,
+            local1,
+            local2,
+            tag,
+            equipament,
+            description,
+    
+    
+        });
+        console.log("Saving data...");
 
+    } catch (error) {
 
-    });
+        console.log("Was not able to save data");
+
+    }
+    
+    console.log("Saved");
 }
 
 //Criando evento do Botão
