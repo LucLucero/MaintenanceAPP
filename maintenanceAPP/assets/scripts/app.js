@@ -73,4 +73,21 @@ async function saveOnDB({date,local1,local2,tag,equipament,description}){
 
 //Criando evento do Botão
 const form = document.querySelector('form');
-form.addEventListener('submit', saveFormData);
+try{
+    const form = document.querySelector('form');
+    form.addEventListener('submit', saveFormData);
+} catch (error) {
+    console.log({error});
+    console.log("Não foi possivel pegar o form");
+
+}
+
+
+//Fazendo a query
+
+async function retrieveData(){
+
+    const queryEvent = await db.maintenanceEvents.toArray();
+    const eventHTML = queryEvent.map(toHTML).join('');
+    
+}

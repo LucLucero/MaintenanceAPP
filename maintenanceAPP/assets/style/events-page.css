@@ -1,0 +1,32 @@
+table {
+
+    
+    font-size: 28px;
+    border: solid 1px;
+
+    
+
+
+}
+td {
+
+    text-align: center;
+    border-right: solid 1px;
+    padding: 2px;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+
+}
+
+tr{
+    
+    margin: 3px
+}
+
+thead, tfoot {
+
+    background-color: #333;
+    color: #fff;
+
+}
