@@ -9,7 +9,7 @@ db.version(1).stores({
 
 db.on('populate', async () => {
 
-    await db.maintenanceEvents.bulkput([
+    await db.maintenanceEvents.bulkPut([
 
         {
             date: "2022/11/09",
