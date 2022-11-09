@@ -78,16 +78,38 @@ h3 {
 
 
 
-a {
+a {    
+      
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 30px;
+    text-decoration: none;
+    color: black;         
+}
 
+
+
+button{
+
+    width: 412px;
+    height: 83px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
     margin: 5px;
     padding: 15px;
     border: solid 1px;
     border-radius: 15px;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 30px;
-    text-decoration: none;
-    color: black;
-      
+    transition-duration: 0.5s;
+    background-color: #2ecc71; 
+    
     
 }
+button:hover{   
+   
+    background-color:#a6ff96;    
+    outline: auto;
+   
+}
+
