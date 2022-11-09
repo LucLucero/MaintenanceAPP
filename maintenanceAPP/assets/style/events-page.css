@@ -8,10 +8,10 @@ table {
 
 
 }
-td, div {
+td{
 
     text-align: center;
-    border-right: solid 1px;
+    border: solid 1px;
     padding: 2px;
     font-size: 20px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;

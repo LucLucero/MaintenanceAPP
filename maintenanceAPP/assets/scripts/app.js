@@ -78,19 +78,21 @@ async function saveOnDB({date,local1,local2,tag,equipament,description}){
         console.log("Was not able to save data");
 
     }
-    retrieveData();
+    
     console.log("Saved");
 }
 
 //Criando evento do Botão
-const form = document.querySelector('form');
-try{
-    const form = document.querySelector('form');
-    form.addEventListener('submit', saveFormData);
-} catch (error) {
-    console.log({error});
-    console.log("Não foi possivel pegar o form");
 
-}
+    try {
 
-export default db;
+        const form = document.querySelector('form');
+        form.addEventListener('submit', saveFormData);   
+
+    } catch (error) {
+
+        console.log("Erro form");
+
+    }
+
+    export default db;
