@@ -56,11 +56,19 @@ async function saveFormData(event){
 
 //Salvando no DB
 
-async function saveOnDB({}){
+async function saveOnDB({date,local1,local2,tag,equipament,description}){
+
+    await db.maintenanceEvents.add({
+
+        date,
+        local1,
+        local2,
+        tag,
+        equipament,
+        description,
 
 
-
-
+    });
 }
 
 //Criando evento do Botão
