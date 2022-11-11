@@ -1,15 +1,6 @@
 import Dexie from "https://cdn.jsdelivr.net/npm/dexie@3.0.3/dist/dexie.mjs";
 
-if('serviceWorker' in navigator){ //nesse if o serviceworker tem q ser minusculo
 
-    const onsuccess = () => console.log('[Service Worker] Registered Success!!');
-    const onerror = () => console.log('[Service Worker] Registered Error!!');
-    
-
-
-    navigator.serviceWorker
-        .register("sw.js")
-}
 
 const db = new Dexie('maintenanceDB');
 
