@@ -1,7 +1,10 @@
 //Abrindo e configurando o CACHE
+export default networkFirst;
 
-const CACHE_KEY = 'app-main-v1';
 const requestURL = 'http://127.0.0.1:5500/maintenanceAPP/index.html' ;
+const CACHE_KEY = 'app-main-v1';
+networkFirst(requestURL);
+
 
 const assetsToCache = [
 
@@ -39,19 +42,15 @@ async function networkFirst(request) {
 
         console.log('oi');
         console.log(request);
+        cacheStaticAssets();
         return await fetch (request);
 
 
     } catch (error) {
         
-        console.log('Error');
-        
-        return cache.match('index.html'); //
+        console.log('Error');        
+        return cache.match('index.html');
     }
-
-    
-
-
 }
-cacheStaticAssets();
-networkFirst(requestURL);
+
+
