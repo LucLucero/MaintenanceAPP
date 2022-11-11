@@ -29,8 +29,7 @@ const assetsToCache = [
 
 async function cacheStaticAssets() {
 
-    const cache = await caches.open(CACHE_KEY);
-    console.log('oi');    
+    const cache = await caches.open(CACHE_KEY);      
     const assets = cache.addAll(assetsToCache);    
     return assets;
 
@@ -39,18 +38,41 @@ async function cacheStaticAssets() {
 async function networkFirst(request) {
 
     try {
-
-        console.log('oi');
+        
         console.log(request);
-        cacheStaticAssets();
+        // cacheStaticAssets();
         return await fetch (request);
 
 
     } catch (error) {
-        
+
         console.log('Error');        
         return cache.match('index.html');
+
     }
 }
 
 
+self.addEventListener('install', event =>{
+    
+    console.log('[Service Worker] Installing service worker...');
+    event.waitUntil(cacheStaticAssets());
+    self.skipWaiting();
+
+});
+
+self.addEventListener('activate', event =>{
+
+
+    console.log('[Service Worker] Activating service worker..., please wait!!');
+    return self.clients.claim();
+
+});
+
+self.addEventListener("fetch", (event) => {
+
+    console.log('[Service Worker] Fetch event worker', event.request.url);
+    event.respondWith(event.request);
+
+
+});
