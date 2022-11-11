@@ -17,7 +17,7 @@ const assetsToCache = [
     "events-page/events-page.html",
     "register-page/register-page.html",
     "index.html",
-    "sw.js",
+    "sw.js", 
     "/",
  
 ];
@@ -29,23 +29,20 @@ async function cacheStaticAssets() {
     
 
 }
-async function networkFirst(request) {
-
-    try {
+async function networkFirst(request) {   
         
-        
-        cacheStaticAssets();        
-        return await fetch (request);
-        
+        try{
+
+            return await fetch (request);
+
+        } catch {
+
+            console.log("[Service Worker] network error");
+            const cache = await caches.open(CACHE_KEY);
+            return cache.match('index.html');
 
 
-    } catch (error) {
-
-        console.log("[Service Worker] network error", error);
-        const cache = await caches.open(CACHE_KEY);
-        return cache.match('index.html');
-
-    }
+        }        
 }
 
 
@@ -53,6 +50,7 @@ self.addEventListener("install", (event) => {
     console.log("[Service Worker] Installing service worker");
     event.waitUntil(cacheStaticAssets());
     self.skipWaiting();
+    
   });
   
   self.addEventListener("activate", () => {
