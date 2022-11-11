@@ -1,6 +1,7 @@
 //Abrindo e configurando o CACHE
 
 const CACHE_KEY = 'app-main-v1';
+const requestURL = 'http://127.0.0.1:5500/maintenanceAPP/index.html' ;
 
 const assetsToCache = [
 
@@ -15,7 +16,8 @@ const assetsToCache = [
     "./assets/style/geareffect.css",
     "./assets/style/home-page-style.css",
     "./events-page/events-page.html",
-    "./register-page/register.html",
+    "./register-page/register-page.html",
+    "./",
     "./index.html",
  
 ];
@@ -25,7 +27,9 @@ const assetsToCache = [
 async function cacheStaticAssets() {
 
     const cache = await caches.open(CACHE_KEY);
-    return cache.addAll(assetsToCache);
+    console.log('oi');    
+    const assets = cache.addAll(assetsToCache);    
+    return assets;
 
 }
 
@@ -33,16 +37,21 @@ async function networkFirst(request) {
 
     try {
 
+        console.log('oi');
+        console.log(request);
         return await fetch (request);
+
 
     } catch (error) {
         
         console.log('Error');
-        const cache = await caches.open(CACHE_KEY);
-        return cache.match('index.html'); // adicionar na pasta offline
-
+        
+        return cache.match('index.html'); //
     }
+
+    
 
 
 }
-
+cacheStaticAssets();
+networkFirst(requestURL);
