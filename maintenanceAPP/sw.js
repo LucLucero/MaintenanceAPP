@@ -25,7 +25,7 @@ async function cacheStaticAssets() {
 
     const cache = await caches.open(CACHE_KEY);    
     console.log('estou em cacheStatic'); 
-    cache.addAll(assetsToCache);    
+    return cache.addAll(assetsToCache);    
     
 
 }
@@ -39,10 +39,24 @@ async function networkFirst(request) {
 
             console.log("[Service Worker] network error");
             const cache = await caches.open(CACHE_KEY);
-            return cache.match('index.html');
+            return cache.match(request);
 
 
         }        
+}
+
+async function cachedFirst(request){
+
+  try {
+    
+
+  } catch (error) {
+    
+
+  }
+
+
+
 }
 
 
