@@ -12,6 +12,7 @@ const assetsToCache = [
     "/assets/scripts/app.js",
     "/assets/scripts/events-query.js",
     "/assets/style/events-page.css",    
+    "/assets/style/register-page.css",    
     "/assets/style/geareffect.css",
     "/assets/style/home-page-style.css",
     "/events-page/events-page.html",

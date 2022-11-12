@@ -6,37 +6,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro de Ocorrência</title>
     <script src="/assets/scripts/app.js" type="module"></script>
+    <link rel="stylesheet" href="/assets/style/register-page.css">
     
 </head>
 <body>
-
-    <h1>Registro de Ocorrência</h1>
-    <form id="form-2">
-        <label>
-           Data: <input type="date" name="date" required>
-        </label>
-        <label>
-           Local: <input type="text" name="local1" required>
-        </label>
-        <label>
-           Local_2: <input type="text" name="local2">
-        </label>
-        <label>
-           TAG: <input type="text" name="tag">
-        </label>
-        <label>
-           Equipamento: <input type="text" name="equipament" required>
-        </label>
-        <label>
-           Descrição: <input type="text" name="description" required>
-        </label>
-       
-        <button>Registrar</button>
-    </form>
-
-    <section id="section">
+     
    
-    </section>
+   
+   
+      
+       <div class="content-container">
+         <header>
+            <a id="voltar" href="/index.html">
+               <img src="/assets/images/back-svgrepo-com.svg" alt="back">
+            </a>
+            <h1>Registro de Ocorrência</h1> 
+            
+         </header>
+         <form id="form-2">
+            <label>
+               Data: <input type="date" name="date" required>
+            </label>
+            <label>
+               Local: <input type="text" name="local1" required>
+            </label>
+            <label>
+                 Local_2: <input type="text" name="local2">
+               </label>
+               <label>
+                  TAG: <input type="text" name="tag">
+               </label>
+               <label>
+                  Equipamento: <input type="text" name="equipament" required>
+               </label>
+               <label>
+                  Descrição: <input type="text" name="description" required>
+               </label>
+               
+               <button>Registrar</button>
+            </form>            
+            <a id="show" href="/events-page/events-page.html">Mostrar todas ocorrências</a>          
+       </div>
+    
+
+    
 
 </body>
 </html>
