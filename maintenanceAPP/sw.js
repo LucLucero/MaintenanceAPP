@@ -1,6 +1,5 @@
 //Abrindo e configurando o CACHE
 
-// const requestURL = 'http://127.0.0.1:5500/maintenanceAPP/index.html' ;
 const CACHE_KEY = 'app-main-v1';
 const assetsToCache = [
 
@@ -10,10 +9,7 @@ const assetsToCache = [
     "/assets/images/gear.svg",
     "/assets/images/sylvamo-logo-5.png",
     "/assets/images/sylvamo-logo.svg",
-    "/assets/images/images.jpeg",
-    "/assets/images/sylvamo-logo.svg",
-    "/assets/images/sylvamo-logo.svg",
-    "/assets/images/sylvamo-logo.svg",
+    "/assets/images/images.jpg",      
     "/assets/scripts/app.js",
     "/assets/scripts/events-query.js",
     "/assets/style/events-page.css",    
