@@ -5,9 +5,14 @@ const CACHE_KEY = 'app-main-v1';
 const assetsToCache = [
 
     "/assets/images/book-svgrepo-com.svg",
+    "/assets/images/back-svgrepo-com.svg",
     "/assets/images/engrenagem.svg",
     "/assets/images/gear.svg",
     "/assets/images/sylvamo-logo-5.png",
+    "/assets/images/sylvamo-logo.svg",
+    "/assets/images/images.jpeg",
+    "/assets/images/sylvamo-logo.svg",
+    "/assets/images/sylvamo-logo.svg",
     "/assets/images/sylvamo-logo.svg",
     "/assets/scripts/app.js",
     "/assets/scripts/events-query.js",
@@ -38,30 +43,6 @@ async function cacheStaticAssets() {
     cache.put(request, response);
 
 }
-
-
-// async function networkFirst(request) {           
-//         try{
-//             return await fetch (request);
-//         } catch {
-//             console.log("[Service Worker] network error");
-//             return fetchFromCache(request);
-//         }        
-// }
-
-// async function cachedFirst(request){
-//   try {
-    
-
-
-//   } catch (error) {
-    
-
-//   }
-
-
-
-// }
 
 async function fetchFromNetwork (request){
 
