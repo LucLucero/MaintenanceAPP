@@ -24,20 +24,29 @@ const assetsToCache = [
 async function cacheStaticAssets() {
 
     const cache = await caches.open(CACHE_KEY);    
-    console.log('estou em cacheStatic'); 
+    console.log('estou em cacheStaticAssets'); 
     return cache.addAll(assetsToCache);    
     
+    
+  }
+  
+  async function addToCache(request, response){
+    
+    const cache = await caches.open(CACHE_KEY); //abrindo o cache e passando o cache key
+    console.log('estou em addCache'); 
+    cache.put(request, response);
 
 }
 
-async function networkFirst(request) {           
-        try{
-            return await fetch (request);
-        } catch {
-            console.log("[Service Worker] network error");
-            return fetchFromCache(request);
-        }        
-}
+
+// async function networkFirst(request) {           
+//         try{
+//             return await fetch (request);
+//         } catch {
+//             console.log("[Service Worker] network error");
+//             return fetchFromCache(request);
+//         }        
+// }
 
 // async function cachedFirst(request){
 //   try {
@@ -53,6 +62,14 @@ async function networkFirst(request) {
 
 // }
 
+async function fetchFromNetwork (request){
+
+  const response = await fetch(request);
+  addToCache(request, response.clone());
+  return response;
+
+}
+
 async function fetchFromCache(request){
 
   const cache = await caches.open(CACHE_KEY);
@@ -60,6 +77,13 @@ async function fetchFromCache(request){
   return cachedResponse || null;
 }
 
+async function networkFirst(request){
+
+  const requestResponse = 
+    (await fetchFromCache(request)) || (await fetchFromNetwork(request));
+    return requestResponse;
+
+}
 
 
 
