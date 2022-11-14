@@ -78,6 +78,7 @@ header a img {
     background-color: black;
     transition-duration: 0.5s;
     outline: none;
+    padding: 7px;
 }
 
 #show:hover {
@@ -90,21 +91,26 @@ header a img {
 
 h1 {
 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
     font-size: 20px;
-    text-decoration-line: underline;      
+         
 
 }
 h2{
 
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-size: 20px;
     position: relative;
     top: 50px;
     text-align: center;
-
-
+    
+    
 }
 
 form{
-
+    
     display: grid;
     grid-template-columns: repeat(2,1fr);
     gap: 15px;
@@ -120,8 +126,10 @@ form{
 }
 
 label {
-
-   margin: 5px;
+    
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   margin: 5px;   
+   font-weight: bold;
 
 }
 
@@ -183,6 +191,7 @@ label {
 
 button{
     
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
