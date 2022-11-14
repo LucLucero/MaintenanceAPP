@@ -114,6 +114,8 @@ form{
     padding: 15px;
     border-radius: 25px;
     background-color: #a6ff96;
+    justify-items: center;
+    align-items: center;
     
 }
 
@@ -148,8 +150,7 @@ label {
     grid-column: 2;
     grid-row: 2;
     display: flex;
-    align-items: center;
-    justify-content: left;
+    align-items: center;    
     gap: 10px;
     
 }
@@ -180,6 +181,38 @@ label {
 }
 
 
+button{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    border: solid 1px;    
+    padding: 2px;
+    border-radius: 20px;    
+    margin: 2px;
+    text-align: center;
+    background-color: black;
+    transition-duration: 0.5s;
+    grid-column: 2;
+    grid-row: 4;
+
+
+}
+
+button:hover {
+
+
+    outline: solid 3px black;
+    background-color:grey;
+    color: black;
+
+}
+
 #footer-buttons {
     
     display: flex;
@@ -191,31 +224,6 @@ label {
     
 }
 
-#footer-buttons button{
-
-    width: 100px;
-    height: 50px;    
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 15px;
-    color: white;
-    border: solid 1px  ;    
-    padding: 2px;
-    border-radius: 20px;    
-    margin: 2px;
-    text-align: center;
-    background-color: black;
-    transition-duration: 0.5s;
-
-}
-
-#footer-buttons button:hover {
-
-
-    outline: solid 3px black;
-    background-color:#a6ff96;
-    color: black;
-
-}
 
 footer {
 

@@ -10,11 +10,6 @@
     
 </head>
 <body>
-     
-   
-   
-   
-      
        <div class="content-container">
          <header>
             <a id="voltar" href="/index.html">
@@ -30,27 +25,52 @@
                   Data: <input type="date" name="date" style="width: 200px; height: 25px;" required>
                </label>
                <label id="local1-label">
-                  Local: <input type="text" name="local1"required style="width: 200px; height: 25px;">
+                  Local:
+                  <select name="local1" id="">
+                     <option value="" focus></option>
+                     <option value="mp3">MP3</option>
+                     <option value="mp4">MP4</option>
+                     <option value="mp5">MP5</option>
+                     <option value="mp6">MP6</option>                   
+                     <option value="cru">CRU</option>
+                  </select>
+                  <!-- Local: <input type="text" name="local1"required style="width: 200px; height: 25px;"> -->
                </label>
                <label id="local2-label">
-                    Local 2: <input type="text" name="local2" style="width: 200px; height: 25px;">
+                  Local 2:
+                  <select name="local2" id="">
+                     <option value="" focus></option>
+                     <option value="parte-seca">Parte Seca</option>
+                     <option value="parte-umida">Parte Úmida</option>
+                                    
+                  </select>
+                    <!-- Local 2: <input type="text" name="local2" style="width: 200px; height: 25px;"> -->
                </label>
                <label id="tag-label">
-                     TAG: <input type="text" name="tag" style="width: 200px; height: 25px;">
+                     TAG: <input type="text" name="tag" style="width: 200px; height: 25px;" placeholder="Apenas se houver TAG...">
                </label>
                <label id="equipament-label">
-                     Equipamento: <input type="text" name="equipament" required style="width: 200px; height: 25px;">
+                     Equipamento: <!-- <input type="text" name="equipament" required style="width: 200px; height: 25px;"> -->
+                     <select name="equipament" id="">
+                        <option value="" focus></option>
+                        <option value="calcoil">Calcoil</option>
+                        <option value="autoslice">Autoslice</option>
+                        <option value="caixa-de-vapor">Caixa de Vapor</option>
+                        <option value="cam">Câmeras de Quebra</option>
+                        <option value="aw">AW</option>
+                        <option value="wp">WP</option>
+                     </select> 
                </label>
                <label id="description-label">
-                     Descrição: <textarea type="text" name="description" required style="width: 175px; height: 80px;"></textarea>
+                     Descrição: <input type="text" name="description" required style="width: 175px; height: 80px;">
                </label>
+               <button>Registrar</button>
             
             </form>
          </div> 
-            <br><br>
+            
          
             <div id="footer-buttons">
-               <button>Registrar</button>
                <br><br>
                <a id="show" href="/events-page/events-page.html">Mostrar todas ocorrências</a>
             </div>          
