@@ -23,31 +23,44 @@
             <h1>Registro de Ocorrência</h1> 
             
          </header>
-         <form id="form-2">
-            <label>
-               Data: <input type="date" name="date" required>
-            </label>
-            <label>
-               Local: <input type="text" name="local1" required>
-            </label>
-            <label>
-                 Local_2: <input type="text" name="local2">
+         <div class="form-content">
+            <h2>Tabela de Registro</h2>
+            <form id="form-2">
+               <label id="data-label">
+                  Data: <input type="date" name="date" style="width: 200px; height: 25px;" required>
                </label>
-               <label>
-                  TAG: <input type="text" name="tag">
+               <label id="local1-label">
+                  Local: <input type="text" name="local1"required style="width: 200px; height: 25px;">
                </label>
-               <label>
-                  Equipamento: <input type="text" name="equipament" required>
+               <label id="local2-label">
+                    Local 2: <input type="text" name="local2" style="width: 200px; height: 25px;">
                </label>
-               <label>
-                  Descrição: <input type="text" name="description" required>
+               <label id="tag-label">
+                     TAG: <input type="text" name="tag" style="width: 200px; height: 25px;">
                </label>
-               
+               <label id="equipament-label">
+                     Equipamento: <input type="text" name="equipament" required style="width: 200px; height: 25px;">
+               </label>
+               <label id="description-label">
+                     Descrição: <textarea type="text" name="description" required style="width: 175px; height: 80px;"></textarea>
+               </label>
+            
+            </form>
+         </div> 
+            <br><br>
+         
+            <div id="footer-buttons">
                <button>Registrar</button>
-            </form>            
-            <a id="show" href="/events-page/events-page.html">Mostrar todas ocorrências</a>          
+               <br><br>
+               <a id="show" href="/events-page/events-page.html">Mostrar todas ocorrências</a>
+            </div>          
+            <footer>
+
+               Desenvolvido por: Luciano Lucero 
+         
+             </footer>
        </div>
-    
+
 
     
 

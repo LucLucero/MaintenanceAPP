@@ -75,20 +75,153 @@ header a img {
     width: 210px;
     margin: 2px;
     text-align: center;
-    background-color: #2ecc71;
+    background-color: black;
     transition-duration: 0.5s;
+    outline: none;
 }
 
 #show:hover {
 
-    background-color:#a6ff96;    
-    outline: auto;
+    outline: solid 3px black;
+    background-color:#a6ff96;
+    color: black;    
 
 }
 
 h1 {
 
     font-size: 20px;
-        
+    text-decoration-line: underline;      
+
+}
+h2{
+
+    position: relative;
+    top: 50px;
+    text-align: center;
+
+
+}
+
+form{
+
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    text-align: justify;
+    position: relative;
+    top: 100px;     
+    padding: 15px;
+    border-radius: 25px;
+    background-color: #a6ff96;
+    
+}
+
+label {
+
+   margin: 5px;
+
+}
+
+#data-label{
+
+    
+    grid-row: 1/-1;
+    grid-column: 1/-1;   
+    display: flex;    
+    align-items: center;
+    gap: 10px;     
+    
+}
+
+#local1-label{
+    
+    grid-column: 1;
+    grid-row: 2;    
+    display: flex;    
+    align-items: center;
+    gap: 5px;    
+}
+
+#local2-label {
+    
+    grid-column: 2;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 10px;
+    
+}
+#tag-label {
+
+    display: flex;    
+    align-items: center;
+    gap: 10px;    
+    grid-column: 1;
+    grid-row: 3;    
+    
+}
+
+#equipament-label {
+    
+   
+    grid-column: 2;
+    grid-row: 3;
+    
+}
+#description-label {
+    
+    display: flex;    
+    align-items: center;
+    gap:2px;
+    grid-column: 2/1;   
+    
+}
+
+
+#footer-buttons {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+    
+}
+
+#footer-buttons button{
+
+    width: 100px;
+    height: 50px;    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+    color: white;
+    border: solid 1px  ;    
+    padding: 2px;
+    border-radius: 20px;    
+    margin: 2px;
+    text-align: center;
+    background-color: black;
+    transition-duration: 0.5s;
+
+}
+
+#footer-buttons button:hover {
+
+
+    outline: solid 3px black;
+    background-color:#a6ff96;
+    color: black;
+
+}
+
+footer {
+
+
+    position: relative;
+    top: 160px;
+
 
 }
