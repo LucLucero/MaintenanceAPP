@@ -93,6 +93,14 @@ thead, tfoot {
 
     background-color: #333;
     color: #fff;
-    padding: 30px;
+    
+
+}
+
+th {
+
+   padding: 2px;
+    
+
 
 }
